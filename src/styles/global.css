@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Montserrat";
+  color: black;
+}
+html, body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background: white !important;
+}
+
+p {
+  margin: 16px auto;
+  line-height: 1.5em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+  font-size: 3.5em;
+  margin-top: 80px;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 30px 0px 10px 0px;
+}
+h4 {
+  font-size: 1.6em;
+  font-weight: 400;
+  margin: 20px 0px 5px 0px;
+
+}
+.html {
+  margin-top: 40px;
+}
+.featured {
+  margin-bottom: 40px;
+}
+/* layout & nav */
+
+.home-page-content {
+  max-width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #1D4C2D;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+nav .links {
+  display: inline-block;
+  text-align: right;
+}
+nav a {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav a:hover {
+  border-color: white;
+  color: white;
+  text-decoration: underline;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #36453b;
+    margin-right: 10px;
+    padding: 20px;
+    padding-left: 0px;
+    padding-bottom: 5px;
+    text-align: left;
+    z-index: 10000;
+}
+li:hover .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.submenu:hover, ul:hover {
+  display: flex;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+/* cta-component styles */
+
+.cta-component {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.half-image {
+  display: flex;
+  max-width: 60%;
+}
+.full-image {
+  display: flex;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+.cta-button {
+  max-width: 30%;
+  padding: 5px;
+  margin: 10px;
+}
+
+/* Parish styles*/
+.parish-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.parish-member {
+  display: flex;
+}
+
+.parish-member__img {
+  aspect-ratio: 16/9;
+}
+.parish-member__text {
+  width:60%;
+}
+
+.downloads {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.download-link {
+  margin-bottom: 10px;
+}
+
+.download-link:hover {
+  text-decoration: underline 2px solid #36453b;
+}
+
+#footer {
+  background-color: #757D77;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact {
+  max-width: 100%;
+  width: 100%;
+  padding: 15px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+}
+
+.contact-left {
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.contact-left .contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > input, textarea {
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.form-group > input {
+  padding: 10px;
+}
+
+.contact-form__name {
+  border: none;
+  margin-right: 5px;
+}
+
+.contact-form__email {
+  border: none;
+  margin-left: 5px;
+}
+
+.map-embed {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.event-popup-image {
+  float:right;
+}
+
+/* Desktop stylings */
+
+@media only screen and (min-width: 768px) {
+  nav {
+    justify-content: flex-end;
+  }
+  .contact {
+    justify-content: space-between;
+    max-width: 1200px;
+    text-align: start;
+  }
+  .contact-right {
+    align-items: flex-start;
+  }
+
+}

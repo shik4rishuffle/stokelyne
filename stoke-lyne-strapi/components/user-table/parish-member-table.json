@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_user_table_parish_member_tables",
+  "info": {
+    "name": "parishMemberTable",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "parish_members": {
+      "collection": "parish-members"
+    }
+  }
+}

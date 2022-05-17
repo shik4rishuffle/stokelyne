@@ -1,0 +1,24 @@
+.events {
+  width: 100%;
+}
+
+.upcomingContainer {
+  left: 0;
+  top:0;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+.event p {
+  margin: 16px 0;
+}
+

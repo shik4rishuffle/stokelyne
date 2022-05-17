@@ -1,0 +1,29 @@
+.feature-image {
+    margin-top: 80px;
+    aspect-ratio: 16/9;
+}
+
+.standard h2 {
+    font-size: 3.5em;
+}
+
+.standard h3 {
+    font-size: 2em;
+    font-weight: 400;
+    margin: 30px 0px 10px 0px;
+}
+
+.standard h4 {
+    font-size: 1.6em;
+    font-weight: 400;
+    margin: 20px 0px 5px 0px;
+
+}
+
+.html {
+    margin-top: 40px;
+}
+
+.featured {
+    margin-bottom: 40px;
+}

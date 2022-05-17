@@ -1,0 +1,29 @@
+.downloads {
+  width: 100%;
+}
+
+.downloadsContainer {
+  left: 0;
+  top:0;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 10px;
+}
+.download p {
+  margin: 16px 0;
+}
+
+a {
+  text-decoration: none;
+}

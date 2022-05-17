@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/minutes",
+      "handler": "minutes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/minutes/count",
+      "handler": "minutes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/minutes/:id",
+      "handler": "minutes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/minutes",
+      "handler": "minutes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/minutes/:id",
+      "handler": "minutes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/minutes/:id",
+      "handler": "minutes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

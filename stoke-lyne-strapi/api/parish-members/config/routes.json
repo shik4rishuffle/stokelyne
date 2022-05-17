@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/parish-members",
+      "handler": "parish-members.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/parish-members/count",
+      "handler": "parish-members.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/parish-members/:id",
+      "handler": "parish-members.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/parish-members",
+      "handler": "parish-members.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/parish-members/:id",
+      "handler": "parish-members.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/parish-members/:id",
+      "handler": "parish-members.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
