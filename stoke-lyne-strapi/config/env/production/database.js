@@ -13,7 +13,7 @@ module.exports = ({ env }) => {
             rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
           },
         },
-        debug: false,
+        debug: true,
       },
     };
   }
