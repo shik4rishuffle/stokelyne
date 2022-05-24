@@ -38,7 +38,7 @@ module.exports = {
         {
             resolve: "gatsby-source-strapi",
             options: {
-                apiURL: "https://stoke-lyne-strapi-z5kgx.ondigitalocean.app",
+                apiURL: "https://stoke-lyne-strapi-z5kgx.ondigitalocean.app:1337",
                 collectionTypes: [
                     "blog-posts",
                     "blog-categories",
