@@ -1,40 +1,33 @@
-import { graphql } from "gatsby";
+import {graphql} from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
 import * as styles from "../styles/standard-page.module.css";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import UserTable from "../components/UserTable";
-import GalleryComponent from "../components/Gallery";
 
+export default function StandardPage({data}) {
+    const {slug, title, subtitle, featureImage, pageText, optionalComponents} = data.strapiBasicPages;
+    let parishMembers;
 
-export default function StandardPage({ data }) {
-	const { slug, title, subtitle, featureImage, pageText, optionalComponents } = data.strapiBasicPages;
-	let parishMembers;
-	let photoGallery;
+    // @todo: create dynamic optional components loader
+    if (optionalComponents && title === "Stoke Lyne Parish Council") {
+        parishMembers = <UserTable className="parish-members" data={data.allStrapiParishMembers}/>;
+    }
 
-	// @todo: create dynamic optional components loader
-	if (optionalComponents && title === "Stoke Lyne Parish Council") {
-		parishMembers = <UserTable className="parish-members" data={data.allStrapiParishMembers} />;
-	}
-
-	// @todo: create gallery component
-	if (optionalComponents && title === "The views around Stoke Lyne") {
-		photoGallery = <GalleryComponent data={slug} />
-	}
-	return (
-		<Layout>
-			<div className={styles.standard}>
-				<GatsbyImage image={getImage(featureImage.localFile)} alt={featureImage?.alt} className={styles.featureImage} />
-				<h2>{title}</h2>
-				<h3>{subtitle}</h3>
-				<ReactMarkdown rehypePlugins={[rehypeRaw]}>{pageText}</ReactMarkdown>
-				{parishMembers}
-				{photoGallery}
-			</div>
-		</Layout>
-	);
+    return (
+        <Layout>
+            <div className={styles.standard}>
+                <GatsbyImage image={getImage(featureImage.localFile)} alt={featureImage?.alt}
+                             className={styles.featureImage}/>
+                <h2>{title}</h2>
+                <h3>{subtitle}</h3>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>{pageText}</ReactMarkdown>
+                {parishMembers}
+            </div>
+        </Layout>
+    );
 }
 
 export const query = graphql`
