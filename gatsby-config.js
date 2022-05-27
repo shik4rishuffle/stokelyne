@@ -38,7 +38,7 @@ module.exports = {
         {
             resolve: "gatsby-source-strapi",
             options: {
-                apiURL: "localhost:1337",
+                apiURL: "http://localhost:1337",
                 collectionTypes: [
                     "blog-posts",
                     "blog-categories",
