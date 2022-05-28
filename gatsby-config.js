@@ -2,6 +2,7 @@ module.exports = {
     siteMetadata: {
         siteUrl: "https://www.stokelyne.com",
         title: "stoke lyne",
+        social: "none",
     },
     plugins: [
         `gatsby-transformer-remark`,
