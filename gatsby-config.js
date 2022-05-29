@@ -38,7 +38,7 @@ module.exports = {
         {
             resolve: "gatsby-source-strapi",
             options: {
-                apiURL: "http://209.97.128.146:1337",
+                apiURL: process.env.APIURL,
                 collectionTypes: [
                     "blog-posts",
                     "blog-categories",
