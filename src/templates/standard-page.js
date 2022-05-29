@@ -19,7 +19,7 @@ export default function StandardPage({data}) {
     return (
         <Layout>
             <div className={styles.standard}>
-                <GatsbyImage image={getImage(featureImage?localFile)} alt={featureImage?.alt}
+                <GatsbyImage image={getImage(featureImage?.localFile)} alt={featureImage?.alt}
                              className={styles.featureImage}/>
                 <h2>{title}</h2>
                 <h3>{subtitle}</h3>
