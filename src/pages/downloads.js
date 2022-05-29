@@ -20,7 +20,7 @@ export default function Downloads({ data }) {
 							setModalData(download.node);
 							setModalShow(true);
 						}}>
-							<GatsbyImage image={getImage(download.node.featureImage.localFile)} />
+							<GatsbyImage image={getImage(download.node?.featureImage?.localFile)} />
 							<h4>{download.node.pageTitle}</h4>
 						</div>
 					))}
