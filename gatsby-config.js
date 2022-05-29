@@ -3,9 +3,9 @@ module.exports = {
         siteUrl: "https://www.stokelyne.com",
         title: "stoke lyne",
         author: "Flynn & Ben",
-        social: {
-            facebook: "its a lie"
-        }
+        // social: {
+        //     facebook: "its a lie"
+        // }
     },
     plugins: [
         `gatsby-transformer-remark`,
@@ -42,7 +42,7 @@ module.exports = {
         {
             resolve: "gatsby-source-strapi",
             options: {
-                apiURL: "http://209.97.128.146:1337",
+                apiURL: "http://127.0.0.1:1337",
                 collectionTypes: [
                     "blog-posts",
                     "blog-categories",

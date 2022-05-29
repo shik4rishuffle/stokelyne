@@ -47,6 +47,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "image_gallery": {
+      "via": "basic_pages",
+      "model": "image-galleries"
     }
   }
 }

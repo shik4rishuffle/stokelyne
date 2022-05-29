@@ -6,14 +6,18 @@ import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import UserTable from "../components/UserTable";
+import ImageGallery from "../components/ImageGallery";
 
 export default function StandardPage({data}) {
     const {slug, title, subtitle, featureImage, pageText, optionalComponents} = data.strapiBasicPages;
     let parishMembers;
-
+    let imageGallery;
     // @todo: create dynamic optional components loader
     if (optionalComponents && title === "Stoke Lyne Parish Council") {
         parishMembers = <UserTable className="parish-members" data={data.allStrapiParishMembers}/>;
+    }
+    if (optionalComponents && title === "Views") {
+        imageGallery = <ImageGallery data={data} />;
     }
 
     return (
@@ -25,6 +29,7 @@ export default function StandardPage({data}) {
                 <h3>{subtitle}</h3>
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>{pageText}</ReactMarkdown>
                 {parishMembers}
+                {imageGallery}
             </div>
         </Layout>
     );
@@ -33,20 +38,28 @@ export default function StandardPage({data}) {
 export const query = graphql`
     query optionalComponentsAndPageData($slug: String) {
         strapiBasicPages(slug: {eq: $slug}) {
-          slug
-          title
-          subTitle
-          pageText
-          featureImage {
-            localFile {
-              childImageSharp {
-                gatsbyImageData
+            slug
+            title
+            subTitle
+            pageText
+            featureImage {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+            optionalComponents
+            image_gallery {
+              galleryimages {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
               }
             }
           }
-		  optionalComponents
-        }
-
 		allStrapiParishMembers {
 		edges {
 			node {

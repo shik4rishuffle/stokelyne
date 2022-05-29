@@ -1,0 +1,21 @@
+.img-gallery {
+    margin: auto;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 0.8rem;
+}
+
+.img-view {
+    height: 10rem;
+    width: 10rem;
+    background-color: #7ec699;
+}
+
+
+/*<div className='img-view'><img src='https://placekeanu.com/100/100' /> </div>*/
