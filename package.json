@@ -29,7 +29,6 @@
     "gatsby-plugin-sharp": "^3.14.1",
     "gatsby-source-filesystem": "^3.13.0",
     "gatsby-source-strapi": "^1.0.2",
-    "gatsby-theme-gallery": "^1.0.2",
     "gatsby-transformer-remark": "^4.10.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "react": "^17.0.1",
