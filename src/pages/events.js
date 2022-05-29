@@ -23,7 +23,7 @@ export default function Events({ data }) {
 								setModalData(event);
 								setModalShow(true);
 							}}>
-							<GatsbyImage image={getImage(event.EventPhoto.localFile)} />
+							<GatsbyImage image={getImage(event?.EventPhoto?.localFile)} />
 							<h4>{event.EventTitle}</h4>
 							<span>{event.EventDate}</span>
 							<p>{event.Description}</p>
