@@ -26,6 +26,7 @@
     "strapi-plugin-upload": "3.6.8",
     "strapi-plugin-users-permissions": "3.6.8",
     "strapi-provider-upload-do": "^3.6.6",
+    "strapi-provider-upload-dos": "^4.0.5",
     "strapi-utils": "3.6.8"
   },
   "author": {
