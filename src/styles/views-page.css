@@ -11,11 +11,23 @@
     grid-row-gap: 0.8rem;
 }
 
-.img-view {
+.img-thumb {
     height: 10rem;
     width: 10rem;
-    background-color: #7ec699;
 }
 
+.img-full {
 
-/*<div className='img-view'><img src='https://placekeanu.com/100/100' /> </div>*/
+}
+
+.img-modal {
+    height: auto;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+}
