@@ -3,6 +3,9 @@ module.exports = {
         siteUrl: "https://www.stokelyne.com",
         title: "stoke lyne"
     },
+    flags: {
+        DEV_SSR: false
+    },
     plugins: [
         `gatsby-transformer-remark`,
         `gatsby-plugin-image`,

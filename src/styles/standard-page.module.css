@@ -1,10 +1,12 @@
 .feature-image {
-    margin-top: 80px;
+    margin: 20px auto;
     aspect-ratio: 16/9;
+    max-height: 350px;
 }
 
 .standard h2 {
     font-size: 3.5em;
+    margin-top: 20px;
 }
 
 .standard h3 {
@@ -26,4 +28,17 @@
 
 .featured {
     margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .feature-image {
+        margin-top: 80px;
+        aspect-ratio: 16/9;
+        max-height: 350px;
+        float: right;
+    }
+
+    .standard h2 {
+        margin-top: 80px;
+    }
 }
