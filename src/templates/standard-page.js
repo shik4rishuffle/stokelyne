@@ -8,26 +8,26 @@ import rehypeRaw from "rehype-raw";
 import UserTable from "../components/UserTable";
 
 export default function StandardPage({data}) {
-	const {title, subtitle, featureImage, pageText, optionalComponents} = data.strapiBasicPages;
-	let parishMembers;
+    const {slug, title, subtitle, featureImage, pageText, optionalComponents} = data.strapiBasicPages;
+    let parishMembers;
 
-	// @todo: create dynamic optional components loader
-	if (optionalComponents && title === "Stoke Lyne Parish Council") {
-		parishMembers = <UserTable className="parish-members" data={data.allStrapiParishMembers}/>;
-	}
+    // @todo: create dynamic optional components loader
+    if (optionalComponents && title === "Stoke Lyne Parish Council") {
+        parishMembers = <UserTable className="parish-members" data={data.allStrapiParishMembers}/>;
+    }
 
-	return (
-		<Layout>
-			<div className={styles.standard}>
-				<GatsbyImage image={getImage(featureImage?.localFile)} alt={featureImage?.alt}
-					className={styles.featureImage}/>
-				<h2>{title}</h2>
-				<h3>{subtitle}</h3>
-				<ReactMarkdown rehypePlugins={[rehypeRaw]}>{pageText}</ReactMarkdown>
-				{parishMembers}
-			</div>
-		</Layout>
-	);
+    return (
+        <Layout>
+            <div className={styles.standard}>
+                <GatsbyImage image={getImage(featureImage?.localFile)} alt={featureImage?.alt}
+                             className={styles.featureImage}/>
+                <h2>{title}</h2>
+                <h3>{subtitle}</h3>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>{pageText}</ReactMarkdown>
+                {parishMembers}
+            </div>
+        </Layout>
+    );
 }
 
 export const query = graphql`
