@@ -18,7 +18,7 @@ export default function Minutes({ data }) {
 					<h3>Downloads:</h3>
 					{nodes.map(node => (
 						<a key={node.node.Minutes.id} className={"download-link " + node.node.Minutes.localFile.extension} href={node.node.Minutes.localFile.publicURL} download>
-							{node.node.Minutes.name}.{node.node.Minutes.extension} - {node.node.Minutes.size / 100}kb
+							<div>{node.node.Minutes.name}.{node.node.Minutes.extension} - {node.node.Minutes.size / 100}kb</div>
 							<div>{node.node.DateOfMeeting}</div>
 						</a>
 					))}
