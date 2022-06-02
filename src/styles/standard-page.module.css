@@ -32,7 +32,7 @@
 
 @media only screen and (min-width: 768px) {
     .feature-image {
-        margin: 80px 0 0 0;
+        margin: 80px 0 0 20px;
         aspect-ratio: 16/9;
         max-height: 350px;
         float: right;
