@@ -1,13 +1,12 @@
 
 nav {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px 20px 0 20px;
     background-color: #1D4C2D;
     color: white;
     align-items: flex-start;
-    position: relative;
+    position: fixed;
     width: 100%;
     min-height: 10vh;
 

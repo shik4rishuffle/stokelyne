@@ -12,13 +12,14 @@ class Navbar extends Component {
 	}
 
 	render() {
+		console.log(this.state);
 		return (
 			<nav>
 				<div className={styles.mobileNav}>
-					<button onClick={() => this.setState({view: false})} className={styles.closeButton}>X</button>
-					<button onClick={() => this.setState({view: true})} className={styles.burgerMenu}>open</button>
+					<button onClick={() => this.setState({view: false})} className={styles.closeButton + this.state.view  === true ? styles.show : styles.hide}>X</button>
+					<button onClick={() => this.setState({view: true})} className={styles.burgerMenu + this.state.view ? styles.show : styles.hide}>open</button>
 				</div>
-				<div className={styles.navLinks}>
+				<div className={styles.navLinks + this.state.view === true ? styles.show : styles.hide}>
 					<li>
 						<Link to="/">Home</Link>
 					</li>
