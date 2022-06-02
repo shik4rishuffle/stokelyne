@@ -5,7 +5,7 @@ import * as styles from "../styles/standard-page.module.css";
 
 
 export default function Minutes({ data }) {
-	const nodes = data.allFile.edges;
+	const nodes = data.allStrapiMinutes.edges;
 	console.log(nodes);
 
 	return (
@@ -17,7 +17,10 @@ export default function Minutes({ data }) {
 				<div className="downloads">
 					<h3>Downloads:</h3>
 					{nodes.map(node => (
-						<Link  key={node.id} className={"download-link " + node.node.extension} href={node.node.publicURL} download>{node.node.name}.{node.node.extension} - {node.node.size / 100}kb</Link>
+						<a key={node.node.Minutes.id} className={"download-link " + node.node.Minutes.localFile.extension} href={node.node.Minutes.localFile.publicURL} download>
+							{node.node.Minutes.name}.{node.node.Minutes.extension} - {node.node.Minutes.size / 100}kb
+							<div>{node.node.DateOfMeeting}</div>
+						</a>
 					))}
 				</div>
 			</div>
@@ -27,16 +30,22 @@ export default function Minutes({ data }) {
 }
 
 export const query = graphql`
-query MinutesFiles {
-    allFile(filter: {sourceInstanceName: {eq: "minutes"}}) {
-        edges {
-            node {
-            extension
-            size
-            name
+query minutesQuery {
+  allStrapiMinutes {
+    edges {
+      node {
+        Minutes {
+          name
+          size
+          localFile {
             publicURL
-            }
+            extension
+          }
+          id
         }
+        DateOfMeeting(formatString: "DD/MM/YYYY")
+      }
     }
+  }
 }
 `;
