@@ -243,3 +243,29 @@ form > input, textarea {
     }
 
 }
+
+/* Mobile Style Fixes */
+
+@media only screen and (max-width: 768px) {
+    /* Fixes footer on mobile */
+    .contact-left {
+        width: 100%;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .contact-form__name {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .contact-form__email {
+        margin-left: 0px;
+    }
+
+    .contact-form__body {
+        margin-bottom: 15px;
+    }
+}

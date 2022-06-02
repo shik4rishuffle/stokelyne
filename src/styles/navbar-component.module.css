@@ -80,9 +80,10 @@ nav a:hover {
     z-index: 10000;
 }
 
-.submenu:hover, ul:hover {
+/* Needed? Causes links to display on same line */
+/* .submenu:hover, ul:hover {
     display: flex;
-}
+} */
 
 /*desktop stylings*/
 @media only screen and (min-width: 768px) {
