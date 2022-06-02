@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {Link} from "gatsby";
 import {AnchorLink} from "gatsby-plugin-anchor-links";
 import * as styles from "../styles/navbar-component.module.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 class Navbar extends Component {
 	constructor(props) {
@@ -16,10 +18,19 @@ class Navbar extends Component {
 		return (
 			<nav>
 				<div className={styles.mobileNav}>
-					<button onClick={() => this.setState({view: false})} className={styles.closeButton + this.state.view  === true ? styles.show : styles.hide}>X</button>
-					<button onClick={() => this.setState({view: true})} className={styles.burgerMenu + this.state.view ? styles.show : styles.hide}>open</button>
+					<button onClick={() => this.setState({view: false})}
+						className={this.state.view ? styles.closeButton : styles.mobileHide}>X
+					</button>
+					<button onClick={() => this.setState({view: true})}
+						className={!this.state.view ? styles.burgerMenu : styles.mobileHide}>
+						<FontAwesomeIcon
+							icon={faBars}
+							inverse
+							className="fa-inverse"
+						/>
+					</button>
 				</div>
-				<div className={styles.navLinks + this.state.view === true ? styles.show : styles.hide}>
+				<div className={this.state.view ? styles.navLinks : styles.mobileHide}>
 					<li>
 						<Link to="/">Home</Link>
 					</li>
