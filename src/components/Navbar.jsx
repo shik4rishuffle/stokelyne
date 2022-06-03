@@ -14,7 +14,6 @@ class Navbar extends Component {
 	}
 
 	render() {
-		console.log(this.state);
 		return (
 			<nav>
 				<div className={styles.mobileNav}>
