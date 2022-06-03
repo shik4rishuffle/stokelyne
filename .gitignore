@@ -3,3 +3,6 @@ node_modules/
 public
 .idea
 .env.local
+.DS_Store
+src/assets/.DS_Store
+src/assets/parish/.DS_Store

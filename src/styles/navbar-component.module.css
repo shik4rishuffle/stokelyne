@@ -1,0 +1,150 @@
+
+nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 20px 0 20px;
+    background-color: #1D4C2D;
+    color: white;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    z-index: 10000;
+}
+
+.mobile-show {
+    display: flex;
+}
+
+.mobile-hide {
+    display: none;
+}
+.mobile-nav {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    font-size: 2em;
+}
+
+.mobile-nav button {
+    color: white;
+    background: none;
+    border: none;
+}
+
+.burger-menu {
+    color: white !important;
+}
+
+.fa-bars {
+    color: white !important;
+}
+
+.close-button {
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10%;
+    font-size: 1.2em;
+}
+
+nav .nav-links {
+    text-align: left;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-top: 5px;
+    font-weight: 400;
+    padding-bottom: 8px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    border-color: white;
+    color: white;
+    text-decoration: underline;
+}
+
+.submenu {
+    background-color: #36453b;
+    padding-left: 20px;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-left: 3px solid white;
+    font-size: 1em !important;
+    text-align: left;
+    z-index: 10000;
+}
+
+/* Needed? Causes links to display on same line */
+/* .submenu:hover, ul:hover {
+    display: flex;
+} */
+
+/*desktop stylings*/
+@media only screen and (min-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 20px 40px;
+        background-color: #1D4C2D;
+        color: white;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    nav a {
+        margin-left: 20px;
+        font-size: 1em;
+    }
+
+
+    li:hover .submenu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+    }
+    .contact {
+        justify-content: space-between;
+        max-width: 1200px;
+        text-align: start;
+    }
+
+    .mobile-show {
+        display: flex;
+    }
+
+    .mobile-hide {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .submenu {
+        background-color: #36453b;
+        margin-top: 0 !important;
+        padding: 20px 20px 5px 0;
+        border-left: none;
+        font-size: 1em !important;
+        text-align: center;
+        z-index: 10000;
+    }
+
+    .contact-right {
+        align-items: flex-start;
+    }
+
+}

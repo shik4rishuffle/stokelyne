@@ -71,59 +71,6 @@ h4 {
     padding: 15px;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background-color: #1D4C2D;
-    color: white;
-    align-items: center;
-    text-align: center;
-}
-
-nav .links {
-    display: inline-block;
-    text-align: right;
-}
-
-nav a {
-    display: inline-block;
-    margin-left: 20px;
-    font-weight: 400;
-    padding-bottom: 8px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav a:hover {
-    border-color: white;
-    color: white;
-    text-decoration: underline;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: #36453b;
-    margin-right: 10px;
-    padding: 20px;
-    padding-left: 0px;
-    padding-bottom: 5px;
-    text-align: left;
-    z-index: 10000;
-}
-
-li:hover .submenu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.submenu:hover, ul:hover {
-    display: flex;
-}
-
 .capitalize {
     text-transform: capitalize;
 }
@@ -287,10 +234,6 @@ form > input, textarea {
 /* Desktop stylings */
 
 @media only screen and (min-width: 768px) {
-    nav {
-        justify-content: flex-end;
-    }
-
     .contact {
         justify-content: space-between;
         max-width: 1200px;
@@ -301,4 +244,30 @@ form > input, textarea {
         align-items: flex-start;
     }
 
+}
+
+/* Mobile Style Fixes */
+
+@media only screen and (max-width: 768px) {
+    /* Fixes footer on mobile */
+    .contact-left {
+        width: 100%;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .contact-form__name {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .contact-form__email {
+        margin-left: 0px;
+    }
+
+    .contact-form__body {
+        margin-bottom: 15px;
+    }
 }
