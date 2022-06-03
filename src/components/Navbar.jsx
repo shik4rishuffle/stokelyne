@@ -12,7 +12,6 @@ class Navbar extends Component {
 			view: false
 		};
 	}
-
 	render() {
 		return (
 			<nav>
