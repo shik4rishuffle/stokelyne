@@ -4,7 +4,8 @@ module.exports = {
 		title: "stoke lyne"
 	},
 	flags: {
-		DEV_SSR: false
+		DEV_SSR: false,
+		FAST_DEV: true
 	},
 	plugins: [
 		"gatsby-transformer-remark",

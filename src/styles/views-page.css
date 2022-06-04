@@ -1,0 +1,29 @@
+.img-gallery {
+    margin: auto;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 0.8rem;
+}
+
+.img-thumb {
+    height: 10rem;
+    width: 10rem;
+}
+
+.img-modal {
+    height: auto;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+}

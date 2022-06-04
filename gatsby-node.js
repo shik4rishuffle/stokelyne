@@ -28,3 +28,18 @@ exports.createPages = ({ actions, graphql }) => {
         })
     })
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+    const { createTypes } = actions
+    const typeDefs = `
+        type StrapiBasicPages implements Node {
+            featureImage: FeatureImage
+            optionalComponents: [JSON]
+        }
+        
+        type FeatureImage {
+            localFile: File
+        }
+    `
+    createTypes(typeDefs)
+  }
