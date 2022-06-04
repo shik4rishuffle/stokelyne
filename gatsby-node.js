@@ -31,6 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.createSchemaCustomization = ({ actions }) => {
     const { createTypes } = actions
+    // Add optional fields here to allow GraphQL to return null values alongside other data.
     const typeDefs = `
         type StrapiBasicPages implements Node {
             featureImage: FeatureImage

@@ -3,7 +3,7 @@ import {Modal} from "react-bootstrap";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 function GalleryPopup(props) {
-    let fullImage = "Image not found. How did you get here?"
+    let fullImage = "Image not found. How did you get here?";
     let visible = props.show;
     if (props.image !== null) {
         fullImage = <GatsbyImage className='img-full img-fluid' image={getImage(props.image.localFile)} objectFit="cover"

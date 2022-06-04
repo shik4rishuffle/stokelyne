@@ -13,8 +13,6 @@ export default function StandardPage({data}) {
 	let parishMembers;
 	let imageGallery; 
 
-	// @todo: create dynamic optional components loader
-	console.log(optionalComponents);
     if (optionalComponents) {
 		optionalComponents.map((component) => {
 			// Add more component types here as required.
