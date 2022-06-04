@@ -2,26 +2,45 @@ import { graphql } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
 import * as styles from "../styles/standard-page.module.css";
-
+import { Accordion } from "react-bootstrap";
+import '../styles/minutes-page.css';
 
 export default function Minutes({ data }) {
 	const nodes = data.allStrapiMinutes.edges;
-	console.log(nodes);
-
+	let years = Array(0);
+	nodes.map((node) => {
+		if (!years.includes(node.node.DateOfMeeting.substring(6, 10))) {
+			years.push(node.node.DateOfMeeting.substring(6, 10));
+		}
+	})
+	console.log(years);
 	return (
 		<Layout>
 			<div className={styles.standard}>
 				<h2>Parish Council</h2>
 				<h3>Minutes Resources</h3>
-
+				<h3>Downloads:</h3>
 				<div className="downloads">
-					<h3>Downloads:</h3>
-					{nodes.map(node => (
-						<a key={node.node.Minutes.id} className={"download-link " + node.node.Minutes.localFile.extension} href={node.node.Minutes.localFile.publicURL} download>
-							<div>{node.node.Minutes.name}.{node.node.Minutes.extension} - {node.node.Minutes.size / 100}kb</div>
-							<div>{node.node.DateOfMeeting}</div>
-						</a>
-					))}
+					<Accordion flush>
+					{years.map((year, index) => { 
+						return (
+						<>
+							<Accordion.Item eventKey={index}>
+								<Accordion.Header>{year}</Accordion.Header>
+								<Accordion.Body>
+									{nodes.map((node) => {
+										if (node.node.DateOfMeeting.substring(6, 10) === year) {
+										return (<a key={node.node.Minutes.id} className={"download-link " + node.node.Minutes.localFile.extension} href={node.node.Minutes.localFile.publicURL} download>
+											<div>{node.node.Minutes.name}.{node.node.Minutes.extension} - {(node.node.Minutes.size / 100).toFixed(2)}kb</div>
+											<div>{node.node.DateOfMeeting}</div>
+										</a>)
+										}
+									})}
+								</Accordion.Body>
+							</Accordion.Item>
+						</>
+						)})}
+					</Accordion>
 				</div>
 			</div>
 
