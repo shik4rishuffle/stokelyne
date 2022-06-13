@@ -13,24 +13,28 @@ export default function StandardPage({data}) {
 	let parishMembers;
 	let imageGallery; 
 
-    if (optionalComponents) {
+	if (optionalComponents) {
 		optionalComponents.map((component) => {
 			// Add more component types here as required.
 			if (component.strapi_component === "user-table.parish-member-table") {
 				parishMembers = <UserTable className="parish-members" data={data.allStrapiParishMembers}/>;
+			} else {
+				parishMembers = null;
 			}
 		});
         
-    }
-    if (image_gallery) {
-        imageGallery = <ImageGallery data={data} />;
-    }
+	}
+	if (image_gallery) {
+		imageGallery = <ImageGallery data={data} />;
+	} else {
+		imageGallery = null;
+	}
 
 	return (
 		<Layout>
 			<div className={styles.standard}>
 				<GatsbyImage image={getImage(featureImage?.localFile)} alt={featureImage?.alt}
-	className={styles.featureImage}/>;
+					className={styles.featureImage}/>
 				<h2>{title}</h2>
 				<h3>{subtitle}</h3>
 				<ReactMarkdown rehypePlugins={[rehypeRaw]}>{pageText}</ReactMarkdown>

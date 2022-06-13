@@ -27,6 +27,9 @@
     "basic_pages": {
       "via": "image_gallery",
       "collection": "basic-page"
+    },
+    "Title": {
+      "type": "string"
     }
   }
 }
