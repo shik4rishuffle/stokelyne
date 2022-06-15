@@ -32,8 +32,7 @@
     "optionalComponents": {
       "type": "dynamiczone",
       "components": [
-        "user-table.parish-member-table",
-        "galleries.image-gallery"
+        "user-table.parish-member-table"
       ]
     },
     "featureImage": {
@@ -47,6 +46,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "image_gallery": {
+      "via": "basic_pages",
+      "model": "image-gallery"
     }
   }
 }

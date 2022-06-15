@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "minutes",
+  "collectionName": "image_galleries",
   "info": {
-    "name": "Minutes",
+    "name": "Image Gallery",
     "description": ""
   },
   "options": {
@@ -12,21 +12,24 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Minutes": {
-      "model": "file",
+    "gallery": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "files",
         "images",
+        "files",
         "videos"
       ],
       "plugin": "upload",
-      "required": true,
+      "required": false,
       "pluginOptions": {}
     },
-    "DateOfMeeting": {
-      "type": "date",
-      "required": true
+    "basic_pages": {
+      "via": "image_gallery",
+      "collection": "basic-page"
+    },
+    "Title": {
+      "type": "string"
     }
   }
 }
