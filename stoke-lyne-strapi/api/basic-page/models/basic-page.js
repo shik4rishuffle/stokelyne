@@ -9,6 +9,7 @@ const { exec } = require("child_process");
 module.exports = {
   lifecycles: {
     afterCreate: async(event) => {
+      console.log('hit');
       const { result, params } = event;
       exec(`yarn build && pm2 restart all`, (error, stdout, stderr) => {
         if (error) {
@@ -20,6 +21,7 @@ module.exports = {
       });
     },
     afterUpdate: async(event) => {
+      console.log('hit');
       const { result, params } = event;
       exec(`yarn build && pm2 restart all`, (error, stdout, stderr) => {
         if (error) {
