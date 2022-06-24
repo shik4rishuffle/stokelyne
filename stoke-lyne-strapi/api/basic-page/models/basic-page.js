@@ -11,7 +11,7 @@ module.exports = {
     afterCreate: async(event) => {
       console.log('hit');
       const { result, params } = event;
-      exec(`yarn build && pm2 restart all`, (error, stdout, stderr) => {
+      exec(`cd /home/stokelyne/stokelyne && yarn build && pm2 restart all`, (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
           return;
@@ -23,7 +23,7 @@ module.exports = {
     afterUpdate: async(event) => {
       console.log('hit');
       const { result, params } = event;
-      exec(`yarn build && pm2 restart all`, (error, stdout, stderr) => {
+      exec(`cd /home/stokelyne/stokelyne && yarn build && pm2 restart all`, (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
           return;
@@ -34,7 +34,7 @@ module.exports = {
     },
     afterDelete: async(event) => {
       const { result, params } = event;
-      exec(`yarn build && pm2 restart all`, (error, stdout, stderr) => {
+      exec(`cd /home/stokelyne/stokelyne && yarn build && pm2 restart all`, (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
           return;
