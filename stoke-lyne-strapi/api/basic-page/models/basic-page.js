@@ -21,8 +21,8 @@ module.exports = {
       });
     },
     afterUpdate: async(event) => {
-      console.log('hit');
       const { result, params } = event;
+      console.log('result');
       exec(`cd ../ && yarn build && pm2 restart all`, (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
