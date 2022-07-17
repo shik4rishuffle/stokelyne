@@ -16,18 +16,19 @@ module.exports = {
           console.error(`exec error: ${error}`);
           return;
         }
+        console.log('rebuilt from creation');
         console.log(`stdout: ${stdout}`);
         console.log(`stderr: ${stderr}`);
       });
     },
     afterUpdate: async(event) => {
       const { result, params } = event;
-      console.log('hit');
       exec(`cd ../ && yarn build && pm2 restart all`, (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
           return;
         }
+        console.log('rebuilt from changes');
         console.log(`stdout: ${stdout}`);
         console.log(`stderr: ${stderr}`);
       });
@@ -39,6 +40,7 @@ module.exports = {
           console.error(`exec error: ${error}`);
           return;
         }
+        console.log('rebuilt from delete');
         console.log(`stdout: ${stdout}`);
         console.log(`stderr: ${stderr}`);
       });
