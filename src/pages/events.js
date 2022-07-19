@@ -1,12 +1,12 @@
-import { graphql } from "gatsby";
+import {graphql} from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
 import * as styles from "../styles/events-page.module.css";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import EventPopup from "../components/EventPopup";
 
 
-export default function Events({ data }) {
+export default function Events({data}) {
 	const eventData = data.allStrapiEvents.nodes;
 	const [modalShow, setModalShow] = React.useState(false);
 	const [modalData, setModalData] = React.useState({});
@@ -23,7 +23,7 @@ export default function Events({ data }) {
 								setModalData(event);
 								setModalShow(true);
 							}}>
-							<GatsbyImage image={getImage(event?.EventPhoto?.localFile)} />
+							<GatsbyImage image={getImage(event?.EventPhoto?.localFile)} alt="event photo"/>
 							<h4>{event.EventTitle}</h4>
 							<span>{event.EventDate}</span>
 							<p>{event.Description}</p>
@@ -47,7 +47,7 @@ export const query = graphql`
       nodes {
         ContactEmail
         Description
-        EventDate(formatString: "DD MMMM, YYYY")
+        EventDate
         EventTitle
         EventPhoto {
             localFile {

@@ -67,6 +67,7 @@ h4 {
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 1200px;
+    min-height: 60vh;
     margin: 0 auto;
     padding: 15px;
 }
@@ -141,9 +142,11 @@ h4 {
 
 #footer {
     background-color: #757D77;
+    position: relative;
     display: flex;
     justify-content: center;
     width: 100%;
+    bottom: 0;
 }
 
 .contact {
